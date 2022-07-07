@@ -31,6 +31,17 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.stars{
+    display: none;
+}
+.stars img{
+    width: 15px;
+    height: 15px;
+}
+.rating{
+    margin-left: 15px;
+    padding: 0;
+}
 .fiber-header-top ul{
     display: none;
     padding: 0;
@@ -343,8 +354,16 @@ footer a:hover{
         width: 90%;
         margin: 50px auto;
     }
+    .stars{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
     .fiber-header-illustration{
         margin: 0;
+    }
+    .header-content-left-desktop{
+        margin-top: 50px;
     }
     .benefits li{
         display: inline-block;
