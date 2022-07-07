@@ -2,6 +2,7 @@
 *::before,
 *::after{
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 html{
     padding: 0;
@@ -17,7 +18,6 @@ body{
 .fiber-container{
     width: 100%;
     margin: auto;
-    border: 1px solid red;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,50 @@ body{
     display: flex;
     padding: 20px 20px 0px 20px;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+}
+.fiber-header-top ul{
+    display: none;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+.fiber-header-top ul li{
+    display: inline-block;
+    padding-left: 20px;
+    height: 25px;
+}
+.fiber-header-top ul li a {
+    text-decoration: none;
+    color: black;
+    font-size:1.1rem;
+}
+.nav-light{
+    font-weight: 500;
+}
+.fiber-header-top a:hover{
+    color:#503197;
+}
+.nav-bold{
+    font-weight: 700;
+}
+.nav-right li:last-child{
+    height: 60px;
+}
+.fiber-header-top ul li a.right-button{
+    display: flex;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    color: #e6e5e3;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D13D1;
+}
+.fiber-header-top ul li a.right-button:hover{
+    background-color: #503197;
 }
 .fiber-header-heading-text{
     font-size: 1.1rem;
@@ -51,8 +94,8 @@ body{
     object-fit: cover;
 }
 .fiber-header-intro-bold{
-    margin: 0px 0px;
-    padding-top: 0px;
+    margin: 0;
+    padding-top: 0;
     width: 70%;
     font-size: 2rem;
     font-weight: 700;
@@ -74,7 +117,7 @@ body{
     text-align: center;
     font-size: 1rem;
     font-weight: 700;
-    margin: 10px 20px;
+    margin: 10px auto;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -203,6 +246,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+.testimonial section:last-child{
+    display: none;
+}
 .testimonial .review{
     border: 2px solid rgb(177, 164, 164);
     border-radius: 10px;
@@ -227,6 +273,8 @@ body{
     margin-bottom: 30px;
     line-height: 1rem;
     width: auto;
+    margin-left: 10px;
+    margin-top: 3px;
 }
 .testimonial span{
     font-size: 1rem;
@@ -266,12 +314,88 @@ footer a:hover{
     width: 150px;
 }
 
-@media only screen and (min-width:400px) and (max-width:600px) {
+@media only screen and (min-width:400px){
     footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 }
-
+@media only screen and (min-width:700px){
+    .fiber-header-heading-menu{
+        display: none;
+    }
+    .fiber-header-top ul{
+        display: block;
+    }
+    .fiber-header-top ul li{
+        text-align: right;
+    }
+    .fiber-header-top{
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        margin-top: 3px;
+    }
+    .header-contents-desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: 50px auto;
+    }
+    .fiber-header-illustration{
+        margin: 0;
+    }
+    .benefits li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .fiber-header-intro-bold, 
+    .fiber-header-intro-light,
+    .benefits{
+        margin-left: 0;
+    }
+    .header-button{
+        width: 100%;
+    }
+    .why-fiber{
+        width: 90%;
+        padding-left: 0;
+        margin: auto;
+    }
+    .fiber-features{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+    .feature-section{
+        width: 30%;
+    }
+    .testimonial .review{
+        width: 47.5%;
+        margin: 40px 0 20px 0;
+    }
+    .testimonial section:last-child{
+        display: block;
+    }
+    .testimonial{
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .blue-section{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media only screen and (min-width:960px) {
+    section.footer-intro{
+        width: 30%;
+    }
+}
 
