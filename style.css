@@ -230,7 +230,7 @@ body{
     margin: auto;
     margin-bottom: 20px;
 }
-.blue-section-button{
+ .blue-section-button{
     background-color: white;
     color: #4D13D1;
     width: 100%;
@@ -256,6 +256,8 @@ body{
 .testimonial{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 30px;
 }
 .testimonial section:last-child{
     display: none;
@@ -263,8 +265,8 @@ body{
 .testimonial .review{
     border: 2px solid rgb(177, 164, 164);
     border-radius: 10px;
-    margin: 40px 20px 20px 20px;
-    padding: 20px 10px 30px 20px;
+    margin: 20px 20px 0px 20px;
+    padding: 20px 10px 0px 20px;
 }
 .testimonial img{
     width: 40px;
@@ -293,17 +295,23 @@ body{
     color: #4D13D1;
     display: block;
 }
-.review-button{
+.testimonial .review .review-button{
     border: 2px solid rgb(177, 164, 164);
     width: 95%;
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 footer{
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
     background-color:#FBF8F3;
+}
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
 }
 footer p, footer ul{
     font-weight: 500;
@@ -321,8 +329,11 @@ footer a{
 footer a:hover{
     color: #4D13D1;
 }
-.sitemap, .resources, .company, .portfolio{
-    width: 150px;
+.sitemap, .resources, .company{
+    width: 100px;
+}
+.portfolio{
+    width: 170px;
 }
 
 @media only screen and (min-width:400px){
@@ -394,7 +405,7 @@ footer a:hover{
     }
     .testimonial .review{
         width: 47.5%;
-        margin: 40px 0 20px 0;
+        margin: 40px 0 0px 0;
     }
     .testimonial section:last-child{
         display: block;
@@ -403,6 +414,7 @@ footer a:hover{
         flex-direction: row;
         width: 90%;
         margin: auto;
+        margin-bottom: 50px;
         flex-wrap: wrap;
         padding: 0;
         justify-content: space-between;
@@ -411,10 +423,114 @@ footer a:hover{
         width: 90%;
         margin: auto;
     }
+    .footer-container{
+        flex-direction: row;
+    }
 }
-@media only screen and (min-width:960px) {
-    section.footer-intro{
-        width: 30%;
+@media only screen and (min-width:1000px) {
+    .fiber-header-intro-bold{
+        width: 420px;
+        font-size: 2.4rem;
+        font-weight: 900;
+    }
+    .header-button{
+        display: inline-flex;
+        width: 150px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .view-examples{
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+    }
+    .header-content-left-desktop{
+        margin-top: 40px;
+    }
+    .blue-section{
+        display: flex;
+        padding: 30px 30px 0 30px;
+        height: 400px;
+        justify-content: space-between;
+    }
+    .blue-section-left{
+        width: 45%;
+        padding-left: 10px;
+    }
+    .blue-section-heading{
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+    .blue-section-paragraph{
+        width: 340px;
+        color: #e6e5e3;
+        font-size: .9rem;
+        font-weight: 300;
+        margin: 0;
+    }
+    .blue-section-button{
+        width: 150px;
+        margin-top: 20px;
+    }
+    .blue-section-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        margin: 0;
+    }
+    .fiber-header-top{
+        width: 80%;
+    }
+    .header-contents-desktop{
+        width: 80%;
+    }
+    .testimonial{
+        width: 80%;
+    }
+    .fiber-features{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .blue-section{
+        width:80%;
+    }
+    .why-fiber{
+        width: 80%;
+    }
+    .blue-section-img{
+        width: 50%;
+    }
+    .footer-container{
+        width: 80%;
+        margin: auto;
+    }
+    footer{
+        padding: 40px 0 40px 0 ;
+    }
+}
+@media only screen and (min-width:1250px) {
+    .fiber-header-illustration{
+        width: 45%;
+        height: 20%;
+    }
+    .fiber-header-intro-light{
+        width: 75%;
+    }
+    .testimonial{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+    }
+    .testimonial .review{
+        max-width: 30%;
+        flex-shrink: 0;
+    }
+    .testimonial p{
+        line-height: 1.2rem;
+    }
+    footer p{
+        width: 350px;
     }
 }
 
