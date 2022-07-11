@@ -1,0 +1,244 @@
+/* css basic reset */
+html{
+    padding: 0%;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Inter', sans-serif;
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    box-sizing: border-box;
+    font-size: .87rem;
+    /* border: 1px solid red; */
+}
+/* this is where the basic css reset ends*/
+
+/*  *styling the form 
+    *this is for mobile design, 320px screen sizes to 500px  */
+.form-container{
+    width:100%;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);      /* this styles the main form container*/
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 30px 0;
+}
+.label{
+    display: block;
+    font-size: 1rem;                    /* all form labels take this style*/
+    font-weight: 600;
+    width: 90%;
+    margin: auto;
+}
+.top-heading-small{
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.top-heading-large{
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 20px auto;
+}
+.input-large {
+    width: 90%;                         /* all input type of styling aside from button and checkbox*/
+    height: 40px;
+    display: inline-flex;
+    margin: 5px 5% 20px 5%;
+    align-items: center;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 73%);
+}
+.hide-password{
+    display: block;
+    width: 15px;
+    height: 15px;                       /*hide password styling goes here*/
+    margin-left: calc(95% - 23px);
+    margin-top: -47px;
+    margin-bottom: 40px;
+}
+.checkbox{
+    width: 90%;
+    margin: 0px 5% 20px 5%;
+}
+.checkbox input{
+    display: inline-block;
+    vertical-align: top;
+}
+.checkbox label{
+    display: inline-block;
+    margin-left: 5px;
+    width: 90%;
+    font-weight: 500;
+}
+.checkbox a{
+    font-weight: 600;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #4D13D1;
+    border-radius: 5px;
+    height: 40px;
+    width: 90%;
+    border: 1px;
+    color: #e6e5e3;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.button:hover{
+    background-color: hsl(258, 83%, 60%);
+}
+.sign-in{
+    width: 70%;
+    text-align:center;
+    margin: 20px auto;
+    font-weight: 500;
+}
+.sign-in a{
+    text-decoration: none;
+}
+.img-container-1, .fiber-one{
+    display: none;
+}
+/* styling for mobile ends here  */
+
+
+/* styling for tablet view  */
+@media only screen and (min-width:500px) and (max-width:767px) {
+    
+    .fiber-two{
+        display: none;      /* new header for tablet view*/
+    }
+    .blue-container{
+        background-color: #4D13D1;
+        overflow: auto;
+    }
+    .img-container-1, .fiber-one{
+        width: 80%;
+        max-width: 600px;
+        margin: auto;
+        display: block;
+    }
+    .img-container-1{
+        text-align: center;
+    }
+    .img-container-1 img{
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+    .img-container-1 figcaption{
+        max-width: 100%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #e6e5e3;
+        text-align: center;
+        letter-spacing: .1rem;
+        margin-bottom: 10px;
+    }
+    .img-container-1 p{
+        max-width: 290px;
+        text-align: center;
+        font-size: .8rem;
+        color:hsla(40, 6%, 90%, .7);
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .img-container-1 div{
+        width: 8px;
+        height: 8px;
+        background-color:hsla(40, 6%, 90%, .7);
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 40px;
+        border-radius: 100%;
+    }
+    .img-container-1 div:nth-child(4){
+        background-color:hsl(0, 0%, 100%);
+    }
+    .fiber-one{
+        color:#FBF8F3;
+        margin: 30px auto;
+        font-size: 1.3rem;
+        font-weight: 700;
+
+    }
+    .form-container{
+        width: 80%;
+        max-width: 600px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        background-color: (0, 0%, 100%);
+    }
+}
+
+/* styling for tablet and desktop view */
+@media only screen and (min-width:768px) {
+    .blue-container{
+        max-width: 960px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .img-container-1{
+        display: block;
+        background-color: #4D13D1;
+        flex-shrink: 0;
+        width: 50%;
+        text-align: center;
+        padding-top: 90px;
+        padding-bottom: 150px;
+    }
+    
+    .img-container-1 img{
+        display: block;
+        max-width: 80%;
+        object-fit: cover;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .img-container-1 figcaption{
+        max-width: 100%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #e6e5e3;
+        text-align: center;
+        letter-spacing: .1rem;
+        margin-bottom: 7px;
+    }
+    .img-container-1 p{
+        max-width: 290px;
+        text-align: center;
+        font-size: .8rem;
+        color:hsla(40, 6%, 90%, .7);
+        margin: auto;
+        margin-bottom: 7px;
+    }
+    .form-container{
+        width: 43%;
+        align-self: center;
+        background-color: hsl(0, 0%, 100%);
+        margin-left: 0;
+    }
+    .img-container-1 div{
+        width: 8px;
+        height: 8px;
+        background-color:hsla(40, 6%, 90%, .7);     /*styling the round small circles at the bottom of the image*/
+        display: inline-block;                                          
+        margin-right: 5px;
+        border-radius: 100%;
+    }
+    .img-container-1 div:nth-child(4){
+        background-color:hsl(0, 0%, 100%);
+    }
+}

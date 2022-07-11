@@ -1,9 +1,560 @@
+/* page reset */
 *,
 *::before,
 *::after{
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 html{
     padding: 0;
     font-size: 100%;
 }
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: .875rem;
+    background-color: hsl(0, 0, 100%);
+    padding: 0;
+    margin: 0;
+}
+/* main container styling */
+.fiber-container{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+/* header styling starts here */
+.fiber-header{
+    background-color: #FBF8F3;
+}
+.fiber-header-top{
+    display: flex;
+    padding: 20px 20px 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.stars{
+    display: none;
+}
+.stars img{
+    width: 15px;
+    height: 15px;
+}
+.rating{
+    margin-left: 15px;
+    padding: 0;
+}
+.fiber-header-top ul{
+    display: none;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+.fiber-header-top ul li{
+    display: inline-block;
+    padding-left: 20px;
+    height: 25px;
+}
+.fiber-header-top ul li a {
+    text-decoration: none;
+    color: black;
+    font-size:1.1rem;
+}
+.nav-light{
+    font-weight: 500;
+}
+.fiber-header-top a:hover{
+    color:#503197;
+}
+.nav-bold{
+    font-weight: 700;
+}
+.nav-right li:last-child{
+    height: 60px;
+}
+.fiber-header-top ul li a.right-button{
+    display: flex;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    color: #e6e5e3;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D13D1;
+}
+.fiber-header-top ul li a.right-button:hover{
+    background-color: #503197;
+}
+.fiber-header-heading-text{
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 25px;
+    padding-top: 2px;
+}
+.fiber-header-illustration{
+    width: 85%;
+    height: 50%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.hero{
+    display: block;
+    width: 100%;
+    margin-top: -15px;
+    object-fit: cover;
+}
+.fiber-header-intro-bold{
+    margin: 0;
+    padding-top: 0;
+    width: 70%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.fiber-header-intro-light{
+    margin: 10px 0 10px 0px;
+    font-size: 1rem;
+    color: #4F4F4F;
+    font-weight: 500;
+    margin-left: 20px;
+    width: 90%;
+}
+.button{
+    color: #e6e5e3;
+    width: 88%;
+    height: 40px;
+    background-color: #4D13D1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.header-button:hover{
+    background-color: #503197;
+}
+.view-examples{
+    display: block;
+    width: 121px;
+    margin: auto;
+    text-align: center;
+    color: #4D13D1;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid #4D13D1;
+}
+.benefits{
+    padding: 0px;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.benefits li{
+    list-style-type: none;
+    background: url("fiber starter files/Assets/Checkmark.svg") no-repeat left center;
+    background-size: 20px 20px;
+    list-style-position: inside;
+    padding: 10px 0px 10px 25px;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #4F4F4F;
+}
+/* heading styleing ends here */
+ 
+/* features styling starts here */
+.why-fiber{
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.why-fiber .question{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4D13D1;
+    display: block;
+    margin-bottom: 15px;
+}
+.why-fiber .reply{
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 40px;
+}
+.fiber-features{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.feature-section img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.feature-section .section-heading{
+    font-size: .9rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 20px;
+}
+.feature-section .section-paragraph{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4F4F4F;
+    width: 95%;
+    display: block;
+    margin-bottom: 20px;
+} /* features styling ends here */
+
+/* blue section styling starts here */
+.blue-section{
+    background-color: #4D13D1;
+    height: auto;
+    margin: 30px 20px;
+    color: white;
+    padding: 20px 30px 0px 30px;
+    border-radius: 10px;
+}
+.blue-section-heading{
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;    
+}
+.blue-section-paragraph{
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+ .blue-section-button{
+    background-color: white;
+    color: #4D13D1;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 60px;
+}
+.blue-section-button:hover{
+    background-color: gainsboro;
+}
+.blue-section-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.blue-section-img img{
+    display: block;
+    width: 175%;
+    object-fit:cover;
+    margin-left: -83px;
+} /* blue section styling ends here */
+
+
+/* testimonial styling */
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.testimonial section:last-child{
+    display: none;
+}
+.testimonial .review{
+    border: 2px solid rgb(177, 164, 164);
+    border-radius: 10px;
+    margin: 20px 20px 0px 20px;
+    padding: 20px 10px 0px 20px;
+}
+.testimonial img{
+    width: 40px;
+    height: 40px;
+}
+.testimonial p{
+    font-size: 1rem;
+    font-weight: 500;
+    vertical-align: top;
+    margin: 0;
+    line-height: 1.7rem;
+    width: 95%;  
+}
+.review-header p{
+    display: inline-block;
+    font-size: .9rem;
+    margin-bottom: 30px;
+    line-height: 1rem;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.testimonial span{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4D13D1;
+    display: block;
+}
+.testimonial .review .review-button{
+    border: 2px solid rgb(177, 164, 164);
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* testimonial styling ending */
+
+/* styling the footer  */
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color:#FBF8F3;
+}
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+footer p, footer ul{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #4F4F4F;
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    line-height: 2rem;
+}
+footer a{
+    text-decoration: none;
+    color: #4F4F4F;
+}
+footer a:hover{
+    color: #4D13D1;
+}
+.sitemap, .resources, .company{
+    width: 100px;
+}
+.portfolio{
+    width: 170px;
+}
+/* footer styling ends here  */
+
+/* styles for screen more than 400px */
+@media only screen and (min-width:400px){
+    footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+/* styles for screen sizes greater than 700px */
+@media only screen and (min-width:700px){
+    .fiber-header-heading-menu{
+        display: none;
+    }
+    .fiber-header-top ul{
+        display: block;
+    }
+    .fiber-header-top ul li{
+        text-align: right;
+    }
+    .fiber-header-top{
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        margin-top: 3px;
+    }
+    .header-contents-desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: 50px auto;
+    }
+    .stars{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
+    .fiber-header-illustration{
+        margin: 0;
+    }
+    .header-content-left-desktop{
+        margin-top: 50px;
+    }
+    .benefits li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .fiber-header-intro-bold, 
+    .fiber-header-intro-light,
+    .benefits{
+        margin-left: 0;
+    }
+    .header-button{
+        width: 100%;
+    }
+    .why-fiber{
+        width: 90%;
+        padding-left: 0;
+        margin: auto;
+    }
+    .fiber-features{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+    .feature-section{
+        width: 30%;
+    }
+    .testimonial .review{
+        width: 47.5%;
+        margin: 40px 0 0px 0;
+    }
+    .testimonial section:last-child{
+        display: block;
+    }
+    .testimonial{
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .blue-section{
+        width: 90%;
+        margin: auto;
+    }
+    .footer-container{
+        flex-direction: row;
+    }
+}
+/* styling for screen sizes greater than 700px ends here  */
+
+/* styling for screen sizes greater than 1000px */
+@media only screen and (min-width:1000px) {
+    .fiber-header-intro-bold{
+        width: 420px;
+        font-size: 2.4rem;
+        font-weight: 900;
+    }
+    .header-button{
+        display: inline-flex;
+        width: 150px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .view-examples{
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+    }
+    .header-content-left-desktop{
+        margin-top: 40px;
+    }
+    .blue-section{
+        display: flex;
+        padding: 30px 30px 0 30px;
+        height: 400px;
+        justify-content: space-between;
+    }
+    .blue-section-left{
+        width: 45%;
+        padding-left: 10px;
+    }
+    .blue-section-heading{
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+    .blue-section-paragraph{
+        width: 340px;
+        color: #e6e5e3;
+        font-size: .9rem;
+        font-weight: 300;
+        margin: 0;
+    }
+    .blue-section-button{
+        width: 150px;
+        margin-top: 20px;
+    }
+    .blue-section-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        margin: 0;
+    }
+    .fiber-header-top{
+        width: 80%;
+    }
+    .header-contents-desktop{
+        width: 80%;
+    }
+    .testimonial{
+        width: 80%;
+    }
+    .fiber-features{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .blue-section{
+        width:80%;
+    }
+    .why-fiber{
+        width: 80%;
+    }
+    .blue-section-img{
+        width: 50%;
+    }
+    .footer-container{
+        width: 80%;
+        margin: auto;
+    }
+    footer{
+        padding: 40px 0 40px 0 ;
+    } /* styling for screen sizes greater than 1000px  ends here*/
+}
+
+/* styling for screen sizes greater than 1250px */
+@media only screen and (min-width:1250px) {
+    .fiber-header-illustration{
+        width: 45%;
+        height: 20%;
+    }
+    .fiber-header-intro-light{
+        width: 75%;
+    }
+    .testimonial{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+    }
+    .testimonial .review{
+        max-width: 30%;
+        flex-shrink: 0;
+    }
+    .testimonial p{
+        line-height: 1.2rem;
+    }
+    footer p{
+        width: 350px;
+    }
+}
+/* styling for screen sizes greater than 1250px ends here */
